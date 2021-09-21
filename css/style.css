@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    max-height: 100vh;
+    overflow: hidden;
+    --color-light: #000; 
+}
+body.active {
+    --color-light: #fff; 
+    background: #000b09;
+  }
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    background: linear-gradient(#fd1e0033, #ff6347);
+    transform: translate(180px, 180px);
+
+}
+section::after {
+    content: "";
+    position: absolute;
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    background: linear-gradient(#ddb503, #3cff01c5);
+    transform: translate(-180px, -180px);
+}
+
+.box {
+    border: solid 3px #ffffff1a;
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff1a;
+    backdrop-filter: blur(5px);
+    z-index: 200;
+    box-shadow: 0 20px 40px #00000040;
+    text-align: center;
+}
+h1 {
+    color: #2ab600c5;
+    font-size: 30px;
+}
+
+.batteryShap {
+    position: relative;
+    width: 210px;
+    height: 100px;
+    border: 6px solid var(--color-light);
+    border-radius: 12px;
+    margin: 20px;
+}
+
+.batteryShap::before {
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 7px;
+    border: 1px solid;
+    border-radius: 4px;
+    background: var(--color-light);
+    transform: translate(108px, 30px);
+}
+.batteryShap::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background: #ffffff1a;
+}
+
+.level {
+    position: absolute;
+    inset: 4px;
+    border-radius: 8px;
+}
+
+#percentage {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(90deg, #3cff01c5, #ff6347);
+    border-radius: 8px;
+}
+
+#percent {
+    font-weight: 600;
+    font-size: 30px;
+    color: #ff6347;
+}
+
+#theme {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: #333 solid;
+    text-align: center;
+    line-height: 35px;
+    color: var(--color-light);
+}
