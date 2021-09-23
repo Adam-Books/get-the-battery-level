@@ -1,127 +1,131 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  overflow: hidden;
 }
 
 body {
-    max-height: 100vh;
-    overflow: hidden;
-    --color-light: #000; 
+  --color-light: #000;
+  max-height: 100vh;
+  overflow: hidden;
 }
+
 body.active {
-    --color-light: #fff; 
-    background: #000b09;
-  }
+  --color-light: #fff;
+  background: #000b09;
+}
 
 section {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
 }
 
 section::before {
-    content: "";
-    position: absolute;
-    height: 220px;
-    width: 220px;
-    border-radius: 50%;
-    background: linear-gradient(#fd1e0033, #ff6347);
-    transform: translate(180px, 180px);
-
+  background: linear-gradient(#fd1e0033, #ff6347);
+  border-radius: 50%;
+  content: "";
+  height: 220px;
+  position: absolute;
+  transform: translate(180px, 180px);
+  width: 220px;
 }
 section::after {
-    content: "";
-    position: absolute;
-    height: 220px;
-    width: 220px;
-    border-radius: 50%;
-    background: linear-gradient(#ddb503, #3cff01c5);
-    transform: translate(-180px, -180px);
+  background: linear-gradient(#ddb503, #3cff01c5);
+  border-radius: 50%;
+  content: "";
+  height: 220px;
+  position: absolute;
+  transform: translate(-180px, -180px);
+  width: 220px;
 }
 
 .box {
-    border: solid 3px #ffffff1a;
-    border-radius: 20px;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ffffff1a;
-    backdrop-filter: blur(5px);
-    z-index: 200;
-    box-shadow: 0 20px 40px #00000040;
-    text-align: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background: #ffffff1a;
+  border: solid 3px #ffffff1a;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px #00000040;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  text-align: center;
+  width: 300px;
+  z-index: 200;
 }
 h1 {
-    color: #2ab600c5;
-    font-size: 30px;
+  color: #2ab600c5;
+  font-size: 30px;
 }
 
 .batteryShap {
-    position: relative;
-    width: 210px;
-    height: 100px;
-    border: 6px solid var(--color-light);
-    border-radius: 12px;
-    margin: 20px;
+  border: 6px solid var(--color-light);
+  border-radius: 12px;
+  height: 100px;
+  margin: 20px;
+  position: relative;
+  width: 210px;
 }
 
 .batteryShap::before {
-    position: absolute;
-    content: '';
-    height: 30px;
-    width: 7px;
-    border: 1px solid;
-    border-radius: 4px;
-    background: var(--color-light);
-    transform: translate(108px, 30px);
+  background: var(--color-light);
+  border: 1px solid;
+  border-radius: 4px;
+  content: "";
+  height: 30px;
+  position: absolute;
+  transform: translate(108px, 30px);
+  width: 7px;
 }
 .batteryShap::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 50%;
-    background: #ffffff1a;
+  background: #ffffff1a;
+  content: "";
+  height: 50%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .level {
-    position: absolute;
-    inset: 4px;
-    border-radius: 8px;
+  border-radius: 8px;
+  inset: 4px;
+  position: absolute;
 }
 
 #percentage {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 50%;
-    background: linear-gradient(90deg, #3cff01c5, #ff6347);
-    border-radius: 8px;
+  background: linear-gradient(90deg, #3cff01c5, #ff6347);
+  border-radius: 8px;
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 50%;
 }
 
 #percent {
-    font-weight: 600;
-    font-size: 30px;
-    color: #ff6347;
+  color: #ff6347;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 #theme {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: #333 solid;
-    text-align: center;
-    line-height: 35px;
-    color: var(--color-light);
+  border: #333 solid;
+  border-radius: 50%;
+  color: var(--color-light);
+  cursor: pointer;
+  height: auto;
+  padding: 9px;
+  position: absolute;
+  right: 30px;
+  text-align: center;
+  top: 30px;
+  width: 40px;
 }
