@@ -4,6 +4,11 @@ Simple App to get the battery level - dark and light mode - using Vanilla JavaSc
 ## Links
 ###  **The Demo:** [Get the battery level](https://adam-books.github.io/get-the-battery-level/)
 
+<br />
+
+## Note
+**This App doesn't work on all browsers.**
+
 #
 <br />
 
